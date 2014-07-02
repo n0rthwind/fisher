@@ -1,0 +1,7 @@
+/obj/*
+
+/fisher/obj/*
+
+/fisher/bin/*
+
+!/**/server_config.xml
