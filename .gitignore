@@ -1,7 +1,7 @@
+.gitconfig
+#пока оставил
+#fisher.suo 
 /obj/*
-
 /fisher/obj/*
-
 /fisher/bin/*
-
 !/**/server_config.xml

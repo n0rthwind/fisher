@@ -137,6 +137,8 @@ namespace FISHER
             buttonСomSetings.Enabled = true;
             // Заблокировать панель управления
             tabelPanel1.Enabled = false;
+            // Очищаем список КП, с которыми нет соединеия
+            treeViewConfig.DisconnectObjects.Clear();
 
             // Не допускаем повторный вывод отчета по ошибкам
             if (((Button)sender).Name != "buttonStop") return;

@@ -34,14 +34,14 @@ namespace FISHER
                 // Изменяем цвет корневого узла
                 if (DisconnectObjects.Count == 0) 
                     this.Nodes[0].ForeColor = Color.DarkGreen;
-                else 
-                    if (DisconnectObjects.Count == DataServer.modulNevod.Count - 1) 
+                else
+                    if ((DisconnectObjects.Count == 1) || (DisconnectObjects.Count == DataServer.modulNevod.Count - 1))
                         this.Nodes[0].ForeColor = Color.DarkRed;
             }
             else
             {
                 color = Color.Red;
-                if (DisconnectObjects.Find(_name => _name == name) == null) DisconnectObjects.Add(name);
+                if (DisconnectObjects.Find(_name => _name == name) == null) { DisconnectObjects.Add(name); }
                 // Зменяем цвет корневого узла, если еще не делали этого
                 if ((DisconnectObjects.Count == 1) || (DisconnectObjects.Count == DataServer.modulNevod.Count - 1))
                     this.Nodes[0].ForeColor = Color.DarkRed;
@@ -60,6 +60,6 @@ namespace FISHER
         /// <summary>
         /// Список всех объектов, с которыми нет связи.
         /// </summary>
-        List<string> DisconnectObjects = new List<string>();
+        public List<string> DisconnectObjects = new List<string>();
     }
 }
